@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Pacifico&display=swap');
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.font-pacifico {
+		font-family: 'Pacifico', cursive;
+	}
+	.font-karla {
+		font-family: 'Karla', sans-serif;
+	}
+
+	.transition-home-black-div {
+		transition: height 0.5s ease,
+			width 1s ease 0.5s /* Delay for width */;
+	}
+
+	.intro-div-bg {
+		background: linear-gradient(to right, white 50%, black 50%) bottom,
+			linear-gradient(to right, white 50%, black 50%) top;
+		background-repeat: no-repeat;
+		background-size: 100% 2px;
+		border-left: 2px solid white;
+		border-right: 2px solid black;
+	}
+
+	@media screen and (max-width: 640px) {
+		.intro-div-bg {
+			background: linear-gradient(180deg, white 50%, black 50%) left,
+				linear-gradient(180deg, white 50%, black 50%) right;
+			background-repeat: no-repeat;
+			background-size: 2px;
+			border: none;
+			border-top: 2px solid white;
+			border-bottom: 2px solid black;
+		}
+	}
+
+	body {
+		user-select: none;
+	}
+
+	.blog-bg {
+		background: url(./assets/Images/blog-bg.jpg) no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+	.text-stroke-2-transparent {
+        -webkit-text-stroke: 2px gray;
+		text-stroke: 2px gray;
+	}
+	.text-stroke-transparent {
+        -webkit-text-stroke: 1px gray;
+		text-stroke: 1px gray;
+	}
+}
+
+@layer utilities {
+    
+}
+
+@media screen and (max-width: 450px) {
+	.my-info-img-div img {
+		max-height: 220px;
+	}
+	.blogs-link {
+		right: -12px;
+	}
+	.work-link{
+		left: 35px;
+	}
+	.home-links {
+		left: 27px;
+	}
+}
+
+@media screen and (max-width: 338px) {
+	.my-info-img-div img {
+		max-height: 220px;
+	}
+	.my-info-details-div>:nth-child(2) {
+		font-size: 18px;
+	}
+}
